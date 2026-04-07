@@ -218,7 +218,11 @@ export class NotificationMessageBuilder implements INotificationMessageBuilder {
 		};
 	}
 
-	private buildEscalationContent(monitor: Monitor, monitorStatusResponse: MonitorStatusResponse, decision: MonitorActionDecision): NotificationContent {
+	private buildEscalationContent(
+		monitor: Monitor,
+		monitorStatusResponse: MonitorStatusResponse,
+		decision: MonitorActionDecision
+	): NotificationContent {
 		const title = `🚨 ESCALATION: Monitor Still Down - ${monitor.name}`;
 		const summary = `URGENT: Monitor "${monitor.name}" has been down for an extended period and requires immediate attention.`;
 		const details = [
